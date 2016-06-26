@@ -246,7 +246,7 @@ check_domain_status()
         ${WHOIS} -h "whois.afilias.info" "${1}" > ${WHOIS_TMP}
     elif [ "${TLDTYPE}"  == "com" -o "${TLDTYPE}"  == "net" -o "${TLDTYPE}"  == "edu" ];
     then
-	${WHOIS} -h ${WHOIS_SERVER} "=${1}" > ${WHOIS_TMP}
+	${WHOIS} -h ${WHOIS_SERVER} "${1}" > ${WHOIS_TMP}
     else
 	${WHOIS} "${1}" > ${WHOIS_TMP}
     fi
